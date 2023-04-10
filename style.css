@@ -1,0 +1,52 @@
+
+.page{
+    min-height: 100vh;
+    background-color: antiquewhite;
+    display: grid;
+    place-items: center;
+}
+.container{
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 40%;
+    align-items: center;
+    background-color: blueviolet;
+
+    position: relative;
+}
+.picture{
+    --size: 50px;
+    --offset: 90px;
+    --degrees:0deg;
+
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: cyan;
+    
+    position: absolute;
+    top: calc(var(--size)/2);
+    left: calc(var(--size)/2);
+
+    transform: translate(calc(cos(var(--degrees))*var(--offset)), calc(sin(var(--degrees))*var(--offset)));
+}
+
+.picture:nth-of-type(1){
+    --degrees:0deg;   
+}
+.picture:nth-of-type(2){
+    --degrees:60deg; 
+}
+.picture:nth-of-type(3){
+    --degrees:120deg;
+}
+.picture:nth-of-type(4){
+    --degrees:180deg;
+}
+.picture:nth-of-type(5){
+    --degrees:240deg;
+}
+.picture:nth-of-type(6){
+    --degrees:300deg;
+}
+
